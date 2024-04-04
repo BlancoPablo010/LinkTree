@@ -1,0 +1,81 @@
+h1 { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+
+
+body {
+    background-color: #19345cb2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.enlace {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.enlace-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #19345cb2;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow here */
+}
+
+.enlace-item:hover {
+    background-color: #fff;
+    color: #19345cb2;
+}
+
+.enlace-item a {
+    
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+
+}
+
+.enlace-item:hover a {
+    color: #19345cb2;
+}
+
+.enlace-item img {
+    float:left;
+    width: 50px;
+    height: 50px;
+}
+
