@@ -3,13 +3,27 @@ h1 { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 24px
 
 body {
     background-color: #19345cb2;
-    margin: 0;
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        max-width: 100%;
+    }
 }
 
 .logo {
@@ -19,8 +33,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
-    gap: 20px;
 }
 
 .logo img {
@@ -30,7 +42,7 @@ body {
 }
 
 .logo h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #fff;
 }
 
@@ -62,7 +74,7 @@ body {
 
 .enlace-item a {
     
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-decoration: none;
     color: #fff;
     text-align: center;
