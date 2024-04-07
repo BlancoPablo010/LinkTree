@@ -8,26 +8,18 @@
 </head>
 <body>
     <div class="logo">
-        <img src="img/logo.jpeg">
+        <img src="../assets/img/logo.jpeg">
         <h1>Pablo Blanco López</h1>
     </div>
 
     <div class="enlace">
-        <div class="enlace-item" onclick="window.open('about.html');">
-            <img src="img/logoAbout.png">
-            <a href="about.html">About me</a>
-            <img src="img/logoAbout.png">
-        </div>
-        <div class="enlace-item" onclick="window.open('https:'+'/'+'/github.com/BlancoPablo010');">
-            <img src="img/logoGitHub.png" >
-            <a href="https://github.com/BlancoPablo010">Github</a>
-            <img src="img/logoGitHub.png">
-        </div>
-        <div class="enlace-item" onclick="window.open('https:'+'/'+'/www.linkedin.com/in/pablo-blanco-l%C3%B3pez-a4b583293/')">
-            <img src="img/logoLinkedIn.png">
-            <a href="https://www.linkedin.com/in/pablo-blanco-l%C3%B3pez-a4b583293/">LinkedIn</a>
-            <img src="img/logoLinkedIn.png">
-        </div>
+        {% for enlace in enlaces %}
+            <div class="enlace-item" onclick="window.open('{{ enlace.url }}');">
+                <img src="{{ enlace.logo }}">
+                <p>{{enlace.nombre}}</p>
+                <img src="{{ enlace.logo }}">
+            </div>
+        {% endfor % }
     </div>
     
 </body>

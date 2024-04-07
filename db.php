@@ -10,7 +10,7 @@ function getEnlaces() {
       echo "Connected to MySQL";
     }
     
-    $mysqli -> query("SELECT * FROM `enlaces`");
+    $result = $mysqli -> query("SELECT * FROM enlaces");
     
     $enlaces = array();
     
@@ -24,6 +24,7 @@ function getEnlaces() {
     
     $mysqli -> close();
     
+    echo "MySQL connection closed";
     return $enlaces;
 }
 
