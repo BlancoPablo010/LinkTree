@@ -35,50 +35,36 @@
         <div class="parragraph">
             <h1>My Skills</h1>
             <ul class="skill-list">
-                <li class="skill-item click" id="#a13f48" onclick="toggleTransition(this)">
-                    <h3>HTML</h3>
-                    <img src="assets/img/logoHTML.png">
-                </li>
-                <li class="skill-item" id="#3f48a1" onclick="toggleTransition(this)">
-                    <h3>CSS</h3>
-                    <img src="assets/img/logoCSS.png">
-                </li>
-                <li class="skill-item">
-                    <h2></h2>
-                    <img>
-                </li>
-                <li class="skill-item">
-                    <h2></h2>
-                    <img>
-                </li>
-                <li class="skill-item">
-                    <h2></h2>
-                    <img>
-                </li>
-                <li class="skill-item">
-                    <h2></h2>
-                    <img>
-                </li>
-                <li class="skill-item">
-                    <h2></h2>
-                    <img>
-                </li>
+                {% for skill in skills %}
+                    <li class="skill-item" id="{{ skill.color }}" onclick="toggleTransition(this)">
+                        <h3>{{ skill.name }}</h3>
+                        <img src="{{ skill.logo }}">
+                    </li>
+                {% endfor %}
             </ul>
         </div>
     
         <div class="parragraph">
             <h1>My Projects</h1>
-            <p>These are some of the projects I have worked on:</p>
-            <ul>
-                <li>Some Graphics OpenGL code: animations, lights, textures...</li>
-                <li>Web pages: this one, a mountain activities info web page, a film finder web page, a tik tak toe game web page...</li>
-                <li>Some Python code: a web scraper, a data analysis...</li>            
+            <p>These are some of the projects I have worked on since I have my GitHub account, and I share all of my projects there. 
+               The list is ordered in descending order of the last project I have uploaded. My GitHub account is in previous page.
+            </p>
+            <ul class="project-list">
+                {% for project in projects %}
+                    <li class="project-item">
+                        <p>
+                            {{ project.description }}
+                        </p>
+                    </li>
+                {% endfor %}
             </ul>
         </div>
     </div>
 
-    <div class="go-back">
-        <a href="/">Go back</a>
+    <div class="go-back" onclick="window.location.href='index.php'">
+        <img src="assets/img/back.png">
+        <h3>GO BACK</h3>
+    </div>
 
     <script src="assets/scripts/main.js"></script>
 </body>

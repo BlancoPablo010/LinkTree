@@ -1,9 +1,14 @@
-UPDATE enlaces SET img = 'assets/img/logoAbout.png' WHERE id = 1;
-UPDATE enlaces SET img = 'assets/img/logoGitHub.png' WHERE id = 2;
-UPDATE enlaces SET img = 'assets/img/logoLinkedIn.png' WHERE id = 3;
 
-assets/img/logoAbout.png  assets/img/logoGitHub.png  assets/img/logoLinkedIn.png
+create table skills (
+    id int primary key auto_increment,
+    name varchar(255) not null,
+    logo varchar(255) not null
+);
 
+create table projects (
+    id int primary key auto_increment,
+    description varchar(2000) not null
+);
 
 <ul class="skill-list">
                 <li>HTML</li>

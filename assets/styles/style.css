@@ -110,12 +110,17 @@ body {
     gap: 10px;
 }
 
+.parragraph p {
+    text-align: justify;
+}
+
 .skill-list {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+    padding: 0;
     gap: 20px;
-
 }
 
 .skill-item {
@@ -125,7 +130,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    width: 50%;
+    grid-column: span 1;
     height: 100px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow here */
@@ -163,4 +168,56 @@ body {
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.project-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+
+}
+
+.project-item {
+    width: 80%;
+    background-color: #19345cb2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow here */
+}
+
+.go-back {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #19345cb2;
+    margin-top: 60px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow here */
+}
+
+.go-back h3 {
+    font-size: 25px;
+
+}
+
+.go-back img{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+}
 

@@ -3,11 +3,7 @@ function getEnlaces() {
     require('/etc/php/db.php');
 
     if ($mysqli -> connect_errno) {
-      echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
       exit();
-    }
-    else {
-      echo "Connected to MySQL";
     }
     
     $result = $mysqli -> query("SELECT * FROM enlaces");
@@ -24,8 +20,53 @@ function getEnlaces() {
     
     $mysqli -> close();
     
-    echo "MySQL connection closed";
     return $enlaces;
 }
 
+function getSkills() {
+    require('/etc/php/db.php');
+
+    if ($mysqli -> connect_errno) {
+      exit();
+    }
+    
+    $result = $mysqli -> query("SELECT * FROM skills");
+    
+    $skills = array();
+    
+    while ($row = $result -> fetch_assoc()) {
+        $skills[$row['id']] = array(
+            'name' => $row['name'],
+            'logo' => $row['logo']
+        );
+    }
+    
+    $mysqli -> close();
+    
+    return $skills;
+}
+
+function getProjects() {
+    require('/etc/php/db.php');
+
+    if ($mysqli -> connect_errno) {
+      exit();
+    }
+    
+    $result = $mysqli -> query("SELECT * FROM projects");
+    
+    $projects = array();
+    
+    while ($row = $result -> fetch_assoc()) {
+        $projects[$row['id']] = array(
+            'description' => $row['description']
+        );
+    }
+    
+    $mysqli -> close();
+    
+    return $projects;
+}
+
 ?>
+
