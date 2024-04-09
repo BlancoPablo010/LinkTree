@@ -37,7 +37,8 @@ function getSkills() {
     while ($row = $result -> fetch_assoc()) {
         $skills[$row['id']] = array(
             'name' => $row['name'],
-            'logo' => $row['logo']
+            'logo' => $row['logo'],
+            'color' => $row['color']
         );
     }
     
